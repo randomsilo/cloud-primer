@@ -11,7 +11,7 @@ docker build -t simple-listing-db-image simple-listing-db
 docker images -a
 
 # rum image detached
-docker run -d --name simple-listing-db-container -p 5555:5432 simple-listing-db-image
+docker run -d --name simple-listing-db-container -p 5432:5432 simple-listing-db-image
 
 # stop container
 docker stop simple-listing-db-container
@@ -19,4 +19,7 @@ docker stop simple-listing-db-container
 # re-start container
 docker container start simple-listing-db-container
 
+# start over
+docker rm simple-listing-db-container
+docker image rm simple-listing-db-image
 ```

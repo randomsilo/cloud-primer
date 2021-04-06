@@ -26,7 +26,9 @@ dotnet API that can add, update, and delete a setence entry in a PostgresSql.
 
 ## PostgresSQL
 
-Maintain persistence for an active record pattern table named sentence with three columns: id, sentence, createdOn, and updatedOn.
+Maintain persistence for an active record pattern table named sentence with three columns: id, sentence, created_on, and updated_on.
+
+> Connect to postgres containers using 'host.docker.internal' instead of 'localhost' on Windows 10
 
 # dockerize
 
