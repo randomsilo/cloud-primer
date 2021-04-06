@@ -2,6 +2,8 @@
 
 ## simple-listing-api
 
+### create project
+
 _Ubuntu Linux WSL_
 
 ```bash
@@ -19,5 +21,17 @@ cd ./simple-listing-api
 
 # make web api project
 dotnet new webapi
+```
 
+### run api
+
+```bash
+# change directory
+cd /shop/randomsilo/dev/cloud-primer/simple-listing/services/simple-listing-api
+
+# run 
+dotnet run
+
+# publish
+dotnet publish
 ```

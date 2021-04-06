@@ -44,7 +44,8 @@ namespace simple_listing_api
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "simple_listing_api v1"));
             }
 
-            app.UseHttpsRedirection();
+            // not needed k8/istio mesh will secure
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
