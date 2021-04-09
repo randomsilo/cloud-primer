@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace simple_listing_api.Controllers
+namespace sentence.api.Controllers
 {
     [ApiController]
     [Route("[controller]")]

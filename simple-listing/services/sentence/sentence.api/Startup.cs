@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-namespace simple_listing_api
+namespace sentence.api
 {
     public class Startup
     {
@@ -30,7 +30,7 @@ namespace simple_listing_api
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "simple_listing_api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "sentence.api", Version = "v1" });
             });
         }
 
@@ -41,11 +41,10 @@ namespace simple_listing_api
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "simple_listing_api v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "sentence.api v1"));
             }
 
-            // not needed k8/istio mesh will secure
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 

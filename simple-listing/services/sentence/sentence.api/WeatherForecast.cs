@@ -1,6 +1,6 @@
 using System;
 
-namespace simple_listing_api
+namespace sentence.api
 {
     public class WeatherForecast
     {
