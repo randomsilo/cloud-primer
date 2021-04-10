@@ -13,10 +13,13 @@ docker images -a
 # rum image detached
 docker run -d --name simple-listing-db-container -p 5432:5432 simple-listing-db-image
 
+# start container
+docker container start simple-listing-db-container
+
 # stop container
 docker stop simple-listing-db-container
 
-# re-start container
+# start container
 docker container start simple-listing-db-container
 
 # start over

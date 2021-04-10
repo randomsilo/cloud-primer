@@ -5,8 +5,8 @@ CREATE SCHEMA simple_listing;
 CREATE TABLE simple_listing.sentences (
   id SERIAL PRIMARY KEY,
   sentence TEXT,
-  created_on TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  updated_on TIMESTAMPTZ DEFAULT NULL
+  createdOn TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updatedOn TIMESTAMPTZ DEFAULT NULL
 );
 
 INSERT INTO 
