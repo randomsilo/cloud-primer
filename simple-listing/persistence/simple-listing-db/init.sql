@@ -3,7 +3,7 @@ DROP SCHEMA simple_listing CASCADE;
 CREATE SCHEMA simple_listing;
 
 CREATE TABLE simple_listing.sentences (
-  id SERIAL PRIMARY KEY,
+  id BIGINT GENERATED ALWAYS AS IDENTITY,
   sentence TEXT,
   createdOn TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updatedOn TIMESTAMPTZ DEFAULT NULL
