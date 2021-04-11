@@ -8,10 +8,10 @@ using Xunit;
 
 namespace sentence.test
 {
-    public class SentenceServiceTest
+    public class ImplMemoryTest
     {
         [Fact]
-        public void ImplMemoryTests()
+        public void BasicCrud()
         {
             ISentenceService service = new SentenceServiceImplMemory();
 
