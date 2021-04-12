@@ -67,8 +67,6 @@ dotnet add package xunit.runner.visualstudio
 cd ..
 
 cd $PROJECT.api
-dotnet add package Autofac
-dotnet add package Autofac.Extensions.DependencyInjection
 dotnet add package Dapper
 dotnet add package Serilog
 dotnet add package Serilog.Sinks.Console
@@ -88,4 +86,19 @@ dotnet run
 
 # publish
 dotnet publish
+```
+
+
+# try to connect
+
+```bash
+# find ip address
+ifconfig
+
+# check web server
+curl -I -X GET http://172.17.173.136:8100/Sentence/GetListing
+
+curl -I -X GET http://0.0.0.0:8100/Sentence/GetListing
+
+
 ```
