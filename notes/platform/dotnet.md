@@ -86,7 +86,7 @@ for( $i = 0; $i -lt $ports.length; $i++ ){
 
 ```powershell
 # use: wsl hostname -I
-$remoteport = 172.20.170.34;
+$remoteport = 172.17.173.136;
 
 #[Ports]
 
@@ -121,6 +121,6 @@ for( $i = 0; $i -lt $ports.length; $i++ ){
 
 # setup proxy
 netsh interface portproxy delete v4tov4 listenport=8100 listenaddress=0.0.0.0
-netsh interface portproxy add v4tov4 listenport=8100 listenaddress=0.0.0.0 connectport=8100 connectaddress=172.17.217.205
+netsh interface portproxy add v4tov4 listenport=8100 listenaddress=0.0.0.0 connectport=8100 connectaddress=172.17.173.136
 
 ```

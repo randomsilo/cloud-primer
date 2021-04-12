@@ -62,6 +62,9 @@ sudo apt update
 
 # upgrade
 sudo apt upgrade -y
+
+# network tools
+sudo apt install net-tools
 ```
 
 #### Install Software

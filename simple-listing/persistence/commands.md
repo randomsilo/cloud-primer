@@ -26,3 +26,9 @@ docker container start simple-listing-db-container
 docker rm simple-listing-db-container
 docker image rm simple-listing-db-image
 ```
+
+
+```bash
+# WSL test
+psql -h host.docker.internal database user
+```
