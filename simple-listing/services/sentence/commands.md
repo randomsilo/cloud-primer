@@ -41,5 +41,7 @@ docker image rm sentence.api-image
 ```
 
 ```bash
-http://localhost:8100/Sentence
+http://localhost:8100/sentence
+
+
 ```
