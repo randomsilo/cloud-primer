@@ -41,7 +41,5 @@ docker image rm sentence.api-image
 ```
 
 ```bash
-http://localhost:8100/sentence
-
-
+curl -X GET http://localhost:8100/api/sentence/fetchall
 ```
