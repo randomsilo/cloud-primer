@@ -58,6 +58,9 @@ npm run dev
 vue create spy-glass
 cd spy-glass
 vue add vuetify
+vue add router
+vue add axios
+vue add vue-axios
 
 npm run dev
 ```
