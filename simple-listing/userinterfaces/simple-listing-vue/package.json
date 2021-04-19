@@ -10,6 +10,8 @@
   "dependencies": {
     "@mdi/font": "5.9.55",
     "core-js": "^3.6.5",
+    "primeicons": "^4.1.0",
+    "primevue": "^3.4.0",
     "roboto-fontface": "*",
     "vue": "^3.0.0",
     "vuetify": "^3.0.0-alpha.0"
@@ -23,8 +25,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0",
     "sass": "^1.32.0",
-    "sass-loader": "^10.0.0",
-    "vue-cli-plugin-vuetify": "~2.3.1"
+    "sass-loader": "^10.0.0"
   },
   "eslintConfig": {
     "root": true,

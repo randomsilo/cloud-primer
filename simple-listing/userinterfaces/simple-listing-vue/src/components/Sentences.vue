@@ -1,18 +1,13 @@
 <template>
 <div>
-    <h1>Sentences</h1>
+    <Message v-if="loading" severity="warn" :life="5000" :sticky="false">Loading</Message>
 
-    <p v-if="loading">
-        Loading
-    </p>
-
-    <ul v-if="!loading && data && data.length">
-        <li v-for="post of data" :key="post.id">
-            <p><strong>{{ post.title }}</strong><small>{{ post.id }}</small></p>
-            <p>{{ post.body }}</p>
-        </li>
-    </ul>
-
+    <div>
+        <DataTable :value="data" stripedRows responsiveLayout="scroll">
+            <Column field="id" header="ID"></Column>
+            <Column field="sentence" header="Sentence"></Column>
+        </DataTable>
+    </div>
 </div>
 </template>
 
@@ -35,7 +30,7 @@ export default {
 
             // I prefer to use fetch
             // you can use use axios as an alternative
-            return fetch('http://jsonplaceholder.typicode.com/posts', {
+            return fetch('http://localhost:8100/api/sentence/fetchall', {
                     method: 'get',
                     headers: {
                         'content-type': 'application/json'
@@ -43,7 +38,6 @@ export default {
                 })
                 .then(res => {
                     // a non-200 response code
-                    console.log("fetchData: error");
                     if (!res.ok) {
                         // create error instance with HTTP status text
                         this.error = res.json();
@@ -53,9 +47,6 @@ export default {
                     return res.json();
                 })
                 .then(json => {
-                    console.log("fetchData: response data");
-                    console.log(json);
-
                     // set the response data
                     this.data = json;
                 })
