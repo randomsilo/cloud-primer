@@ -43,3 +43,12 @@ docker image rm sentence.api-image
 ```bash
 curl -X GET http://localhost:8100/api/sentence/fetchall
 ```
+
+
+# run manually
+
+```bash
+set ASPNETCORE_HTTPS_PORT=https://+:8101
+set ASPNETCORE_URLS=http://+:8100
+dotnet run 
+```
